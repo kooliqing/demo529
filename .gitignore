@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# 净值数据通过 POST /api/funds/sync 重建
+data/funds/*.json
