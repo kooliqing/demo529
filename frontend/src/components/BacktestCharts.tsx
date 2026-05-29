@@ -64,7 +64,8 @@ export function BacktestCharts({ series }: Props) {
     <div className="charts-grid">
       <div className="panel chart-panel">
         <h3>资产曲线（元）</h3>
-        <ResponsiveContainer width="100%" height={280}>
+        <div className="chart-container">
+          <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 8, right: 12, left: 4, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--grid)" />
             <XAxis
@@ -81,7 +82,7 @@ export function BacktestCharts({ series }: Props) {
                 String(name),
               ]}
             />
-            <Legend />
+            <Legend wrapperStyle={{ width: '100%' }} />
             <Line
               type="monotone"
               dataKey="dcaAssets"
@@ -99,12 +100,14 @@ export function BacktestCharts({ series }: Props) {
               strokeWidth={2}
             />
           </LineChart>
-        </ResponsiveContainer>
+          </ResponsiveContainer>
+        </div>
       </div>
 
       <div className="panel chart-panel">
         <h3>基金净值 & 定投收益率</h3>
-        <ResponsiveContainer width="100%" height={280}>
+        <div className="chart-container">
+          <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data} margin={{ top: 8, right: 12, left: 4, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--grid)" />
             <XAxis
@@ -130,7 +133,7 @@ export function BacktestCharts({ series }: Props) {
                 return [n.toFixed(4), label]
               }}
             />
-            <Legend />
+            <Legend wrapperStyle={{ width: '100%' }} />
             <Line
               yAxisId="nav"
               type="monotone"
@@ -150,7 +153,8 @@ export function BacktestCharts({ series }: Props) {
               strokeWidth={2}
             />
           </LineChart>
-        </ResponsiveContainer>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   )

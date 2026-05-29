@@ -98,9 +98,13 @@ function App() {
       setResult(data)
     } catch (e) {
       setResult(null)
-      setBacktestError(
-        e instanceof ApiError ? e.message : '回测失败，请检查参数或稍后重试',
-      )
+      const msg =
+        e instanceof ApiError
+          ? e.message
+          : e instanceof Error
+            ? e.message
+            : '回测失败，请检查参数或稍后重试'
+      setBacktestError(msg)
     } finally {
       setBacktestLoading(false)
     }

@@ -1,7 +1,9 @@
 .app {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 1.5rem 1.25rem 3rem;
+  overflow-x: clip;
 }
 
 .app-header {
@@ -64,9 +66,15 @@
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(260px, 320px) 1fr;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
   gap: 1.25rem;
   align-items: start;
+  width: 100%;
+  min-width: 0;
+}
+
+.sidebar {
+  min-width: 0;
 }
 
 .panel {
@@ -330,6 +338,22 @@
   display: grid;
   gap: 1rem;
   margin-bottom: 1rem;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.chart-panel {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.chart-container {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: 280px;
+  overflow: hidden;
 }
 
 .chart-panel h3 {
