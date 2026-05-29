@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+:root {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --bg: #0e1412;
+  --bg-elevated: #141c19;
+  --surface: #18221e;
+  --text: #e8efe9;
+  --muted: #8fa89a;
+  --border: #2a3832;
+  --grid: #243029;
+  --accent-dca: #6ecf9a;
+  --accent-lump: #e8a87c;
+  --accent-nav: #7eb8d4;
+  --accent-return: #c9b86a;
+  --danger: #e07a6a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #1a2e28 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, #2a2218 0%, transparent 45%),
+    var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
